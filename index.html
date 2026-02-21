@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f0f1a" />
+  <title>Matheus Hitallo • Full Stack</title>
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+
+  <!-- Devicon icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <!-- EmailJS (optional, used by contact form JS) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicons (optional) -->
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#hero" aria-label="Voltar ao topo">
+        <span class="brand-gradient" aria-hidden="true">MH</span>
+        <span class="brand-text">Matheus Hitallo</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primária">
+        <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-overlay">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#stack">Tech Stack</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile overlay menu -->
+    <div id="menu-overlay" class="menu-overlay" hidden>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- 1. HERO -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <!-- Decorative background -->
+        <div class="atmosphere" aria-hidden="true">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+        </div>
+
+        <p class="hero-welcome" aria-hidden="true">BEM-VINDO</p>
+
+        <!-- Rotating title -->
+        <div id="rotator" class="rotator" aria-live="polite" aria-atomic="true">
+          <span id="hero-title" class="rotator-slot" role="heading" aria-level="1">Full Stack</span>
+        </div>
+
+        <p class="hero-sub">Crio experiências digitais escaláveis com foco em performance, acessibilidade e design.</p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="#contato">Vamos conversar</a>
+          <a class="btn ghost" href="#projetos">Ver projetos</a>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span class="line"></span>
+          <span class="label">Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HABILIDADES -->
+    <section id="habilidades" class="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title" class="section-title">Habilidades</h2>
+        <div class="skills-grid">
+          <article class="skill-card tilt" data-color="#61dafb">
+            <div class="icon"><i class="devicon-react-original colored" aria-hidden="true"></i></div>
+            <h3>React</h3>
+            <p>SPA e SSR, hooks, roteamento, estados globais.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#2f74c0">
+            <div class="icon"><i class="devicon-typescript-plain colored" aria-hidden="true"></i></div>
+            <h3>TypeScript</h3>
+            <p>Modelagem de tipos, DX, segurança e escalabilidade.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#83cd29">
+            <div class="icon"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i></div>
+            <h3>Node.js</h3>
+            <p>APIs performáticas, streaming e arquiteturas event-driven.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#764abc">
+            <div class="icon"><i class="devicon-redux-original colored" aria-hidden="true"></i></div>
+            <h3>Redux</h3>
+            <p>Estados previsíveis, middlewares e side-effects.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#38bdf8">
+            <div class="icon"><i class="devicon-tailwindcss-plain colored" aria-hidden="true"></i></div>
+            <h3>Tailwind</h3>
+            <p>Design system utilitário com alto controle visual.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#fa8231">
+            <div class="icon"><i class="devicon-docker-plain colored" aria-hidden="true"></i></div>
+            <h3>Docker</h3>
+            <p>Ambientes isolados, CI/CD e entrega confiável.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#f7df1e">
+            <div class="icon"><i class="devicon-javascript-plain colored" aria-hidden="true"></i></div>
+            <h3>JavaScript</h3>
+            <p>Front-end e back-end com foco em UX e performance.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#0db7ed">
+            <div class="icon"><i class="devicon-kubernetes-plain colored" aria-hidden="true"></i></div>
+            <h3>Kubernetes</h3>
+            <p>Orquestração e resiliência em escala.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#ff4154">
+            <div class="icon"><i class="devicon-git-plain colored" aria-hidden="true"></i></div>
+            <h3>Git</h3>
+            <p>Fluxos trunk e gitflow, revisão e automação.</p>
+          </article>
+          <article class="skill-card tilt" data-color="#00c7b7">
+            <div class="icon"><i class="devicon-nextjs-original" aria-hidden="true"></i></div>
+            <h3>Next.js</h3>
+            <p>Roteamento híbrido, ISR e SEO de alta qualidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TECH STACK -->
+    <section id="stack" class="stack" aria-labelledby="stack-title">
+      <div class="container">
+        <h2 id="stack-title" class="section-title">Tech Stack</h2>
+        <div class="marquee-mask">
+          <div class="row marquee-row" data-speed="1.0" data-direction="forward" aria-label="Domínio">
+            <div class="marquee track">
+              <i class="devicon-react-original colored" title="React" aria-hidden="true"></i>
+              <i class="devicon-typescript-plain colored" title="TypeScript" aria-hidden="true"></i>
+              <i class="devicon-nodejs-plain colored" title="Node.js" aria-hidden="true"></i>
+              <i class="devicon-nextjs-original" title="Next.js" aria-hidden="true"></i>
+              <i class="devicon-redux-original colored" title="Redux" aria-hidden="true"></i>
+              <i class="devicon-tailwindcss-plain colored" title="Tailwind" aria-hidden="true"></i>
+              <i class="devicon-react-original colored" title="React" aria-hidden="true"></i>
+              <i class="devicon-typescript-plain colored" title="TypeScript" aria-hidden="true"></i>
+              <i class="devicon-nodejs-plain colored" title="Node.js" aria-hidden="true"></i>
+              <i class="devicon-nextjs-original" title="Next.js" aria-hidden="true"></i>
+              <i class="devicon-redux-original colored" title="Redux" aria-hidden="true"></i>
+              <i class="devicon-tailwindcss-plain colored" title="Tailwind" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="row marquee-row" data-speed="0.65" data-direction="reverse" aria-label="Ferramentas e Frameworks">
+            <div class="marquee track">
+              <i class="devicon-vuejs-plain colored" title="Vue" aria-hidden="true"></i>
+              <i class="devicon-angularjs-plain colored" title="Angular" aria-hidden="true"></i>
+              <i class="devicon-express-original" title="Express" aria-hidden="true"></i>
+              <i class="devicon-graphql-plain colored" title="GraphQL" aria-hidden="true"></i>
+              <i class="devicon-sass-original colored" title="Sass" aria-hidden="true"></i>
+              <i class="devicon-webpack-plain colored" title="Webpack" aria-hidden="true"></i>
+              <i class="devicon-vuejs-plain colored" title="Vue" aria-hidden="true"></i>
+              <i class="devicon-angularjs-plain colored" title="Angular" aria-hidden="true"></i>
+              <i class="devicon-express-original" title="Express" aria-hidden="true"></i>
+              <i class="devicon-graphql-plain colored" title="GraphQL" aria-hidden="true"></i>
+              <i class="devicon-sass-original colored" title="Sass" aria-hidden="true"></i>
+              <i class="devicon-webpack-plain colored" title="Webpack" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="row marquee-row" data-speed="0.35" data-direction="forward" aria-label="Infra e Design">
+            <div class="marquee track">
+              <i class="devicon-amazonwebservices-plain colored" title="AWS" aria-hidden="true"></i>
+              <i class="devicon-docker-plain colored" title="Docker" aria-hidden="true"></i>
+              <i class="devicon-figma-plain colored" title="Figma" aria-hidden="true"></i>
+              <i class="devicon-nginx-original" title="Nginx" aria-hidden="true"></i>
+              <i class="devicon-googlecloud-plain colored" title="GCP" aria-hidden="true"></i>
+              <i class="devicon-linux-plain colored" title="Linux" aria-hidden="true"></i>
+              <i class="devicon-amazonwebservices-plain colored" title="AWS" aria-hidden="true"></i>
+              <i class="devicon-docker-plain colored" title="Docker" aria-hidden="true"></i>
+              <i class="devicon-figma-plain colored" title="Figma" aria-hidden="true"></i>
+              <i class="devicon-nginx-original" title="Nginx" aria-hidden="true"></i>
+              <i class="devicon-googlecloud-plain colored" title="GCP" aria-hidden="true"></i>
+              <i class="devicon-linux-plain colored" title="Linux" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROJETOS (GitHub) -->
+    <section id="projetos" class="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="section-title">Projetos em Destaque</h2>
+        <div id="projects-grid" class="projects-grid" role="list">
+          <!-- Skeletons (placeholder) -->
+          <div class="project-skeleton" aria-hidden="true">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+          </div>
+          <div class="project-skeleton" aria-hidden="true">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+          </div>
+          <div class="project-skeleton" aria-hidden="true">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SOBRE -->
+    <section id="sobre" class="about" aria-labelledby="about-title">
+      <div class="container about-inner">
+        <div class="about-grid">
+          <!-- Foto -->
+          <div class="photo-col">
+            <div class="photo-wrap">
+              <div class="photo-glow" aria-hidden="true"></div>
+
+              <div class="photo-frame">
+                <img src="FotoMT.jpeg" alt="Matheus Hitallo, a young man with short dark hair and a mustache, taking a selfie with a black smartphone. He is wearing a dark blue t-shirt with white outlined text and is smiling at the camera. The background is a plain light gray wall, creating a clean and professional portrait setting.">
+                <div class="photo-overlay" aria-hidden="true"></div>
+              </div>
+
+              <div class="floating-badge" aria-hidden="true">
+                <p class="badge-title">Matheus Hitallo</p>
+                <p class="badge-sub">ADS</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Texto -->
+          <div class="text-col about-copy">
+            <h2 id="about-title" class="section-title">Sobre</h2>
+            <p>
+              Olá! Sou <span class="hl-strong">Matheus Hitallo</span>, desenvolvedor Full Stack apaixonado por transformar
+              ideias em produtos digitais incríveis. Trabalho com as tecnologias mais modernas do mercado para criar
+              soluções que fazem a diferença.
+            </p>
+            <p class="muted">
+              Minha jornada na programação começou pela curiosidade de entender como as coisas funcionam por trás das
+              telas. Hoje, combino design e código para entregar experiências que são bonitas por fora e robustas por dentro.
+            </p>
+
+            <div class="info-grid" role="list">
+              <div class="info-card" role="listitem">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s7-4.35 7-11a7 7 0 10-14 0c0 6.65 7 11 7 11z" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.5" stroke="#a78bfa" stroke-width="1.5"/></svg>
+                </div>
+                <div class="info-meta">
+                  <p class="label">Localização</p>
+                  <p class="value">Brasil</p>
+                </div>
+              </div>
+
+              <div class="info-card" role="listitem">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10h18v8a3 3 0 01-3 3H6a3 3 0 01-3-3v-8z" stroke="#a78bfa" stroke-width="1.5"/><path d="M9 6a2 2 0 012-2h2a2 2 0 012 2v4H9V6z" stroke="#a78bfa" stroke-width="1.5"/></svg>
+                </div>
+                <div class="info-meta">
+                  <p class="label">Foco</p>
+                  <p class="value">Full Stack Dev</p>
+                </div>
+              </div>
+
+              <div class="info-card" role="listitem">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" stroke="#a78bfa" stroke-width="1.5"/><path d="M22 8l-10 6L2 8" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </div>
+                <div class="info-meta">
+                  <p class="label">Contato</p>
+                  <p class="value">Disponível</p>
+                </div>
+              </div>
+
+              <div class="info-card" role="listitem">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 10l-10-5L2 10l10 5 10-5z" stroke="#a78bfa" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 12v5a2 2 0 002 2h8a2 2 0 002-2v-5" stroke="#a78bfa" stroke-width="1.5"/></svg>
+                </div>
+                <div class="info-meta">
+                  <p class="label">Aprendizado</p>
+                  <p class="value">Contínuo</p>
+                </div>
+              </div>
+            </div>
+          </div><!-- text-col -->
+        </div><!-- about-grid -->
+      </div>
+    </section>
+
+    <!-- 6. TIMELINE -->
+    <section id="experiencia" class="timeline" aria-labelledby="timeline-title">
+      <div class="container timeline-inner">
+        <h2 id="timeline-title" class="section-title">Experiência</h2>
+        <div class="timeline-wrap">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <article class="timeline-item" data-index="1">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="card glass">
+              <h3>Full Stack Sênior</h3>
+              <span class="meta">2023 — Atual</span>
+              <p>Liderança técnica, arquitetura de microfrontends e plataformas de dados.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-index="2">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="card glass">
+              <h3>Desenvolvedor Pleno</h3>
+              <span class="meta">2021 — 2023</span>
+              <p>Criação de design systems, pipelines CI/CD e APIs de alta performance.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item" data-index="3">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="card glass">
+              <h3>Bacharelado</h3>
+              <span class="meta">2017 — 2021</span>
+              <p>Engenharia de Software com ênfase em arquitetura e qualidade.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTATO -->
+    <section id="contato" class="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <h2 id="contact-title" class="section-title">Contato</h2>
+
+        <form class="contact-form" id="contact-form" autocomplete="on">
+          <label>
+            <span>Nome</span>
+            <input type="text" name="user_name" placeholder="Seu nome" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="user_email" placeholder="voce@email.com" required />
+          </label>
+          <label class="full">
+            <span>Mensagem</span>
+            <textarea name="message" rows="5" placeholder="Como posso ajudar?" required></textarea>
+          </label>
+          <button type="submit" class="btn liquid-btn">
+            <span class="liquid-bg" aria-hidden="true"></span>
+            <span class="label">Enviar Mensagem</span>
+          </button>
+        </form>
+
+        <div class="social-links" aria-label="Redes sociais">
+          <a href="https://github.com/MatheusHitalloKades?tab=repositories" target="_blank" rel="noopener noreferrer" class="social-link github" aria-label="GitHub">
+            <i class="devicon-github-original colored" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/matheushitallosk/" target="_blank" rel="noopener noreferrer" class="social-link instagram" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="status" role="status" aria-live="polite">
+        <span>System Status: <strong class="status-online">Online</strong></span>
+        <span class="divider" aria-hidden="true">|</span>
+        <span>Latency: <strong id="latency">24ms</strong></span>
+      </div>
+      <small>© <span id="year"></span> Matheus Hitallo. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-hidden="true"></div>
+
+  <!-- Core JS (refactored) -->
+  <script src="/assets/js/script.js" defer></script>
+</body>
+</html>
